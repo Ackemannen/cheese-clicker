@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Eczar:wght@400..800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Eczar', serif;
+    background-color: #fef9c3;
+    color: #1c1917;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 70vw 30vw;
+    background: linear-gradient(135deg, #f97316, #fcd34d);
+    height: 100vh;
+    overflow: hidden;
+    font-family: "Eczar", serif;
+}
+
+.clicker-div {
+    text-align: center;
+    padding-top: 2rem;
+    font-size: 2rem;
+}
+
+h1, h2 {
+    color: #1e293b;
+}
+
+.clicking-info-div h2 {
+    font-size: 2.5rem;
+    margin: 1rem 0 0.25rem;
+}
+
+.clicking-info-div p {
+    font-size: 1.5rem;
+}
+
+.cheese img {
+    width: 225px;
+    margin-top: 4rem;
+    transition: transform 0.2s ease-in-out;
+}
+
+.cheese img:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.cheese img:active {
+    transform: scale(0.9);
+}
+
+/* Store section styling */
+.store-div {
+    background-color: #fff5eb;
+    padding: 2rem;
+    border-left: 4px solid #f97316;
+    overflow-y: auto;
+}
+
+.store-div h1 {
+    text-align: center;
+    font-size: 3rem;
+    color: #7c2d12;
+}
+
+.store-list li {
+    width: 95%;
+    height: 80px;
+    display: grid;
+    grid-template-columns: 20% 50% 30%;
+    align-items: center;
+    border: 1px solid #7c2d12;
+    border-radius: 10px;
+    margin-bottom: 0.5rem;
+    background: #fde68a;
+    transition: background-color 0.2s ease;
+}
+
+.store-list li:hover {
+    background-color: #f97316;
+    color: white;
+}
+
+.store-list li img {
+    width: 50px;
+    margin: auto;
+}
+
+.store-list li span {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.store-div button {
+    background-color: #f97316;
+    color: white;
+    font-weight: bold;
+    margin: 2rem auto;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.store-div button:hover {
+    background-color: #d97706;
+}
+
+
+
+@media (max-width: 1440px) {
+    main {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .store-div {
+        padding: 1rem;
+    }
+
+    .store-list li {
+        width: 90%;
+        margin: 0 auto 10px;
+        height: 70px;
+    }
+}
+
+@media (max-width: 768px) {
+    .store-list li img {
+        width: 40px;
+    }
+
+    .store-div button {
+        font-size: 1rem;
+    }
+}
